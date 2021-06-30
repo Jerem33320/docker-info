@@ -17,6 +17,11 @@ Container is running instance of an image
 - docker container ls   (infos tels que le PORTS …)   (docker ps est plus rapide)
 - docker run -d nginx:nom_du_tag   (detached mode)
 
+docker ps -a (voir container)
+docker rm id
+
+Les ‘hello world’ ne se voit plus car ils se stoppent auto, il faut pas oublier de les rm ou de —rm en les lançant.
+
 
 EXPOSING HOST - FROM THE HOST TO THE CONTAINER exemple localhost:8080 mapped to port TCP 80 du container nginx
 - docker stop docker_id
