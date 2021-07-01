@@ -369,3 +369,22 @@ JENKINS-
 - docker container run --name jenkins -p 8080:8080 -p 50000:50000 -d jenkins/jenkins:lts
 Récupérer le mot de passe:
 - docker container exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+	
+CREER HTML VIA DOCKER
+    créer un dossier "website" sur mon bureau
+
+    créer un fichier "index.html"
+
+    le remplir
+
+    exécuter cette commande dans mon terminal:
+
+dans son terminal /website:
+    docker run --name website -v ${​PWD}​:/usr/share/nginx/html:ro -d -p 8081:80 nginx:latest
+
+    (en faisant attention à bien avoir les 2 tirets etc...)
+
+    et me connecté sur mon navigateur sur le port "localhost:8081"
+
+
+
