@@ -397,21 +397,21 @@ CREER WORDPRESS UTILISANT MARIADB:
 	
 -----
 	
-version: '3'
-services:
-    db:
-        image: mariadb
-        container_name: sql01
-        volumes:
-            - db_data:/var/lib/mysql
-        restart: always
-        environment:
-            MYSQL_ROOT_PASSWORD: secret
-            MYSQL_DATABASE: wordpress
-            MYSQL_USER: wordpress
-            MYSQL_PASSWORD: wordpress
-        networks:
-            - 'rezo'
+	version: '3'
+	services:
+	    db:
+		image: mariadb
+		container_name: sql01
+		volumes:
+		    - db_data:/var/lib/mysql
+		restart: always
+		environment:
+		    MYSQL_ROOT_PASSWORD: secret
+		    MYSQL_DATABASE: wordpress
+		    MYSQL_USER: wordpress
+		    MYSQL_PASSWORD: wordpress
+		networks:
+		    - 'rezo'
 
     wordpress:
         depends_on:
@@ -428,10 +428,10 @@ services:
         networks:
             - 'rezo'
             
-volumes:
-    db_data:
-networks:
-    rezo:
+	volumes:
+	    db_data:
+	networks:
+	    rezo:
 
 -----
 
