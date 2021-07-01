@@ -386,5 +386,65 @@ dans son terminal /website:
 
     et me connecté sur mon navigateur sur le port "localhost:8081"
 
+CREER WORDPRESS UTILISANT MARIADB:
+	[16:02] Jeremy PEYRAT
+  
+    créer son dossier sur son bureau "testwordpress"
+
+    créer docker-compose.yml àl'intérieur
+
+    copié coller le yaml
+	
+-----
+	
+version: '3'
+services:
+    db:
+        image: mariadb
+        container_name: sql01
+        volumes:
+            - db_data:/var/lib/mysql
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: secret
+            MYSQL_DATABASE: wordpress
+            MYSQL_USER: wordpress
+            MYSQL_PASSWORD: wordpress
+        networks:
+            - 'rezo'
+
+    wordpress:
+        depends_on:
+            - db
+        image: wordpress
+        container_name: wp01
+        ports:
+            - "8000:80"
+        restart: always
+        environment:
+            WORDPRESS_DB_HOST: db:3306
+            WORDPRESS_DB_USER: wordpress
+            WORDPRESS_DB_PASSWORD: wordpress
+        networks:
+            - 'rezo'
+            
+volumes:
+    db_data:
+networks:
+    rezo:
+
+-----
+
+    executer ces 2 commandes ds le terminal/mondossier (ici testwordpress):
+
+    docker run --name sql01 -v sqldata:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=secret -d mariadb
+
+    docker run --name wp01 --link sql01:mysql -p 80:80 -d wordpress
+
+    puis executer:
+
+    docker-compose up -d
+
+    ensuite se co dans son navigateur sur localhost:8000
 
 
