@@ -436,9 +436,8 @@ CREER WORDPRESS UTILISANT MARIADB:
 
     executer ces 2 commandes ds le terminal/mondossier (ici testwordpress):
 
-    docker run --name sql01 -v sqldata:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=secret -d mariadb
-
-    docker run --name wp01 --link sql01:mysql -p 80:80 -d wordpress
+    (pas necessaire si docker-compose.yml) docker run --name sql01 -v sqldata:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=secret -d mariadb
+    (pas necessaire si docker-compose.yml) docker run --name wp01 --link sql01:mysql -p 80:80 -d wordpress
 
     puis executer:
 
