@@ -351,3 +351,13 @@ DOCKER EXEC
 - docker exec -it container_id /bin/bash
 ça fail si quand on fait inspect on va ds CMD et on voit qu’on n’est pas en bash
 on peut changer le bash en sh et on se retrouve ds le container
+
+	
+COURS DOCKER----------------
+docker ps -a (voir container)
+docker rm id
+
+Les ‘hello world’ ne se voit plus car ils se stoppent auto, il faut pas oublier de les rm ou de —rm en les lançant.
+
+- docker container run --name matter01 --hostname matter01 -p 85:8065 -d --restart always mattermost/platform
+Tricky localhost:TCP
