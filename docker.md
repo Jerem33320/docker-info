@@ -387,7 +387,6 @@ dans son terminal /website:
     et me connecté sur mon navigateur sur le port "localhost:8081"
 
 CREER WORDPRESS UTILISANT MARIADB:
-	[16:02] Jeremy PEYRAT
   
     créer son dossier sur son bureau "testwordpress"
 
