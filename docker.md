@@ -354,6 +354,7 @@ on peut changer le bash en sh et on se retrouve ds le container
 
 	
 COURS DOCKER----------------
+	
 docker ps -a (voir container)
 docker rm id
 
@@ -361,3 +362,5 @@ Les ‘hello world’ ne se voit plus car ils se stoppent auto, il faut pas oubl
 
 - docker container run --name matter01 --hostname matter01 -p 85:8065 -d --restart always mattermost/platform
 Tricky localhost:TCP
+
+On ne peut déclaré une variable que lorsqu'on run un container. Si on veut modifier, il faut, détruire le container et le rerun avec la nouvelle variable.
