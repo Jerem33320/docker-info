@@ -364,3 +364,8 @@ Les ‘hello world’ ne se voit plus car ils se stoppent auto, il faut pas oubl
 Tricky localhost:TCP
 
 On ne peut déclaré une variable que lorsqu'on run un container. Si on veut modifier, il faut, détruire le container et le rerun avec la nouvelle variable.
+	
+JENKINS-
+- docker container run --name jenkins -p 8080:8080 -p 50000:50000 -d jenkins/jenkins:lts
+Récupérer le mot de passe:
+- docker container exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword
