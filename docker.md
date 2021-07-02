@@ -471,3 +471,9 @@ Todo CREER une IMAGE DOCKER:
 8/ recréer un conteneur avec cette nouvelle version
 	
 REPONSE: cf drive
+	
+PUSH IMAGE SUR NOTRE DOCKER REPO:
+	
+docker tag node-app:0.3 <docker_id>/node-app:0.3
+
+docker push <docker-id>/node-app:0.3
