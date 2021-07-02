@@ -447,6 +447,17 @@ CREER WORDPRESS UTILISANT MARIADB:
 
 
 TEST DU GITHUB DOCKER VOTING APP
-	git clone link
-	Ne garder que le docker-compose-simple.yml
-	docker-compose up -d
+	
+	. git clone link
+	. Ne garder que le docker-compose-simple.yml
+	. docker-compose up -d
+
+Todo :
+1/ créer un répertoire 
+2/ créer le fichier app.js
+3/ créer le Dockerfile
+4/ builder l'image version 0.1
+5/ déployer un conteneur avec cette image et constater que ça marche
+6/ modifier le code du fichier app.js
+7/ rebuilder l'image en v0.2
+8/ recréer un conteneur avec cette nouvelle version
