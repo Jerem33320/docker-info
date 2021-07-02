@@ -446,3 +446,7 @@ CREER WORDPRESS UTILISANT MARIADB:
     ensuite se co dans son navigateur sur localhost:8000
 
 
+TEST DU GITHUB DOCKER VOTING APP
+	git clone link
+	Ne garder que le docker-compose-simple.yml
+	docker-compose up -d
